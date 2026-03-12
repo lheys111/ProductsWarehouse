@@ -2,30 +2,15 @@
 {
     partial class RegisterForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
@@ -33,147 +18,134 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+
             // lblTitle
-            // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTitle.Location = new System.Drawing.Point(170, 27);
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(30, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(345, 25);
-            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Size = new System.Drawing.Size(250, 20);
             this.lblTitle.Text = "Регистрация нового кладовщика";
-            // 
+
             // lblFullName
-            // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(66, 101);
+            this.lblFullName.Location = new System.Drawing.Point(30, 60);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(41, 16);
-            this.lblFullName.TabIndex = 1;
+            this.lblFullName.Size = new System.Drawing.Size(37, 13);
             this.lblFullName.Text = "ФИО:";
-            // 
+
             // lblEmail
-            // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(66, 136);
+            this.lblEmail.Location = new System.Drawing.Point(30, 90);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(44, 16);
-            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.Text = "Email:";
-            // 
+
             // lblPassword
-            // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(66, 179);
+            this.lblPassword.Location = new System.Drawing.Point(30, 120);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(59, 16);
-            this.lblPassword.TabIndex = 3;
+            this.lblPassword.Size = new System.Drawing.Size(48, 13);
             this.lblPassword.Text = "Пароль:";
-            // 
+
             // lblConfirmPassword
-            // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(66, 222);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(30, 150);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(116, 16);
-            this.lblConfirmPassword.TabIndex = 4;
+            this.lblConfirmPassword.Size = new System.Drawing.Size(86, 13);
             this.lblConfirmPassword.Text = "Подтверждение:";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(201, 173);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(314, 22);
-            this.txtPassword.TabIndex = 5;
-            this.txtPassword.UseSystemPasswordChar = true;
-            // 
+
             // txtFullName
-            // 
-            this.txtFullName.Location = new System.Drawing.Point(201, 95);
+            this.txtFullName.Location = new System.Drawing.Point(120, 57);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(314, 22);
-            this.txtFullName.TabIndex = 6;
-            // 
+            this.txtFullName.Size = new System.Drawing.Size(200, 20);
+            this.txtFullName.TabIndex = 0;
+
             // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(201, 133);
+            this.txtEmail.Location = new System.Drawing.Point(120, 87);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(314, 22);
-            this.txtEmail.TabIndex = 7;
-        //    this.txtEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
+            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.TabIndex = 1;
+
+            // txtPassword
+            this.txtPassword.Location = new System.Drawing.Point(120, 117);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(200, 20);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
+
             // txtConfirmPassword
-            // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(201, 216);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(120, 147);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(314, 22);
-            this.txtConfirmPassword.TabIndex = 8;
+            this.txtConfirmPassword.Size = new System.Drawing.Size(200, 20);
+            this.txtConfirmPassword.TabIndex = 3;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
-            // 
+
             // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.Color.White;
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(46, 204, 113);
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Location = new System.Drawing.Point(201, 287);
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(120, 190);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(156, 41);
-            this.btnRegister.TabIndex = 9;
+            this.btnRegister.Size = new System.Drawing.Size(120, 30);
+            this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "Зарегистрироваться";
             this.btnRegister.UseVisualStyleBackColor = false;
-            // 
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+
             // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(231, 76, 60);
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(363, 287);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(250, 190);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(152, 41);
-            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Size = new System.Drawing.Size(70, 30);
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Отмена";
             this.btnCancel.UseVisualStyleBackColor = false;
-            // 
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+
             // RegisterForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(350, 240);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtConfirmPassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtFullName);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
-            this.Load += new System.EventHandler(this.RegisterForm_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Регистрация";
+            // УДАЛЕНО: this.Load += new System.EventHandler(this.RegisterForm_Load);
+
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
-        #endregion
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblConfirmPassword;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;

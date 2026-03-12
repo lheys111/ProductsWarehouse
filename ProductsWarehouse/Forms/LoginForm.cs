@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using System;
+
 using System.Data.SQLite;
-using System.Windows.Forms;
+
 using ProductsWarehouse.Database;
 using ProductsWarehouse.Helpers;
 

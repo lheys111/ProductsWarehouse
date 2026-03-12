@@ -2,153 +2,131 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelTop = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.lblUserInfo = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblDate = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStrip.SuspendLayout();
+            this.panelBottom = new System.Windows.Forms.Panel();
+            this.lblUserInfo = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.panelTop.SuspendLayout();
+            this.panelBottom.SuspendLayout();
             this.SuspendLayout();
-            // 
+
             // menuStrip
-            // 
-            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Location = new System.Drawing.Point(0, 40);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1000, 24);
             this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "menuStrip1";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
+            this.menuStrip.Text = "menuStrip";
+
             // panelTop
-            // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(52, 73, 94);
+            this.panelTop.Controls.Add(this.btnExit);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 24);
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(800, 100);
-            this.panelTop.TabIndex = 2;
-            // 
+            this.panelTop.Size = new System.Drawing.Size(1000, 40);
+            this.panelTop.TabIndex = 1;
+            // УДАЛЕНО: this.panelTop.Load += new System.EventHandler(this.panelTop_Load);
+
             // btnExit
-            // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(231, 76, 60);
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(725, 1);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(900, 8);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 3;
+            this.btnExit.Size = new System.Drawing.Size(80, 25);
+            this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Выход";
-            this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblUserInfo,
-            this.lblDate,
-            this.lblTime,
-            this.lblStatus});
-            this.statusStrip.Location = new System.Drawing.Point(0, 424);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(800, 26);
-            this.statusStrip.TabIndex = 4;
-            this.statusStrip.Text = "statusStrip1";
-            // 
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+
+            // panelBottom
+            this.panelBottom.BackColor = System.Drawing.Color.FromArgb(52, 73, 94);
+            this.panelBottom.Controls.Add(this.lblUserInfo);
+            this.panelBottom.Controls.Add(this.lblDate);
+            this.panelBottom.Controls.Add(this.lblTime);
+            this.panelBottom.Controls.Add(this.lblStatus);
+            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBottom.Location = new System.Drawing.Point(0, 450);
+            this.panelBottom.Name = "panelBottom";
+            this.panelBottom.Size = new System.Drawing.Size(1000, 30);
+            this.panelBottom.TabIndex = 2;
+
             // lblUserInfo
-            // 
+            this.lblUserInfo.AutoSize = true;
+            this.lblUserInfo.ForeColor = System.Drawing.Color.White;
+            this.lblUserInfo.Location = new System.Drawing.Point(10, 8);
             this.lblUserInfo.Name = "lblUserInfo";
-            this.lblUserInfo.Size = new System.Drawing.Size(370, 20);
-            this.lblUserInfo.Spring = true;
+            this.lblUserInfo.Size = new System.Drawing.Size(84, 13);
             this.lblUserInfo.Text = "Пользователь:";
-            // 
+
             // lblDate
-            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(300, 8);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(44, 20);
+            this.lblDate.Size = new System.Drawing.Size(36, 13);
             this.lblDate.Text = "Дата:";
-            // 
+
             // lblTime
-            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(450, 8);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(57, 20);
+            this.lblTime.Size = new System.Drawing.Size(43, 13);
             this.lblTime.Text = "Время:";
-            this.lblTime.Visible = false;
-            // 
+
             // lblStatus
-            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(600, 8);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(370, 20);
-            this.lblStatus.Spring = true;
+            this.lblStatus.Size = new System.Drawing.Size(74, 13);
             this.lblStatus.Text = "Готов к работе";
-            // 
+
             // MainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.statusStrip);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.panelTop);
+            this.ClientSize = new System.Drawing.Size(1000, 480);
+            this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.panelTop);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
-            this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.panelTop_Load);
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Складской учет";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.panelTop.ResumeLayout(false);
+            this.panelBottom.ResumeLayout(false);
+            this.panelBottom.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
-        #endregion
-
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripStatusLabel lblUserInfo;
-        private System.Windows.Forms.ToolStripStatusLabel lblDate;
-        private System.Windows.Forms.ToolStripStatusLabel lblTime;
-        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.Panel panelBottom;
+        private System.Windows.Forms.Label lblUserInfo;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
