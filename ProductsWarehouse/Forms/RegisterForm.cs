@@ -123,6 +123,9 @@ namespace ProductsWarehouse.Forms
             }
         }
 
+        private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -42,13 +42,12 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panelLogo.Controls.Add(this.lblTitle);
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panelLogo.Controls.Add(this.flowLayoutPanel1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelLogo.Location = new System.Drawing.Point(0, 395);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(800, 83);
+            this.panelLogo.Size = new System.Drawing.Size(462, 83);
             this.panelLogo.TabIndex = 0;
             // 
             // lblTitle
@@ -56,12 +55,12 @@
             this.lblTitle.AllowDrop = true;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(86, 24);
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Location = new System.Drawing.Point(196, 46);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(499, 34);
+            this.lblTitle.Size = new System.Drawing.Size(96, 34);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Птички-тупички: Складской учет";
+            this.lblTitle.Text = "ВХОД";
             // 
             // flowLayoutPanel1
             // 
@@ -74,7 +73,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblEmail.Location = new System.Drawing.Point(120, 181);
+            this.lblEmail.Location = new System.Drawing.Point(87, 114);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 20);
             this.lblEmail.TabIndex = 1;
@@ -82,15 +81,16 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(196, 181);
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtEmail.Location = new System.Drawing.Point(91, 137);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(364, 23);
+            this.txtEmail.Size = new System.Drawing.Size(286, 23);
             this.txtEmail.TabIndex = 2;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(121, 239);
+            this.lblPassword.Location = new System.Drawing.Point(88, 185);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(61, 17);
             this.lblPassword.TabIndex = 3;
@@ -98,19 +98,20 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(196, 236);
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtPassword.Location = new System.Drawing.Point(91, 214);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(364, 23);
+            this.txtPassword.Size = new System.Drawing.Size(286, 23);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnLogin.Location = new System.Drawing.Point(196, 308);
+            this.btnLogin.Location = new System.Drawing.Point(91, 256);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(364, 42);
+            this.btnLogin.Size = new System.Drawing.Size(286, 42);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Войти";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -118,21 +119,23 @@
             // 
             // linkRegister
             // 
+            this.linkRegister.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.linkRegister.AutoSize = true;
-            this.linkRegister.LinkColor = System.Drawing.Color.CornflowerBlue;
-            this.linkRegister.Location = new System.Drawing.Point(301, 384);
+            this.linkRegister.LinkColor = System.Drawing.Color.Lime;
+            this.linkRegister.Location = new System.Drawing.Point(199, 319);
             this.linkRegister.Name = "linkRegister";
-            this.linkRegister.Size = new System.Drawing.Size(144, 17);
+            this.linkRegister.Size = new System.Drawing.Size(92, 17);
             this.linkRegister.TabIndex = 6;
             this.linkRegister.TabStop = true;
-            this.linkRegister.Text = "Зарегистрироваться";
+            this.linkRegister.Text = "Регистрация";
             this.linkRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegister_LinkClicked);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 478);
+            this.ClientSize = new System.Drawing.Size(462, 478);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -142,10 +145,8 @@
             this.Controls.Add(this.panelLogo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Text = "Птички-тупички ";
             this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
