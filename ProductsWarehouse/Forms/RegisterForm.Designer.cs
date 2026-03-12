@@ -108,7 +108,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(314, 22);
             this.txtEmail.TabIndex = 7;
-            this.txtEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+        //    this.txtEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtConfirmPassword
             // 
