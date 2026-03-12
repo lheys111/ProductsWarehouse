@@ -7,10 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
 using System.Data.SQLite;
-
 using ProductsWarehouse.Database;
 using ProductsWarehouse.Helpers;
 
@@ -113,6 +110,11 @@ namespace ProductsWarehouse.Forms
                 btnLogin.PerformClick();
                 e.Handled = true;
             }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

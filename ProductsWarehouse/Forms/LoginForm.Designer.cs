@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -51,13 +51,6 @@
             this.panelLogo.Size = new System.Drawing.Size(800, 83);
             this.panelLogo.TabIndex = 0;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(353, 74);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
             // lblTitle
             // 
             this.lblTitle.AllowDrop = true;
@@ -69,6 +62,13 @@
             this.lblTitle.Size = new System.Drawing.Size(499, 34);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Птички-тупички: Складской учет";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(353, 74);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // lblEmail
             // 
@@ -114,6 +114,7 @@
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Войти";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkRegister
             // 
@@ -125,6 +126,7 @@
             this.linkRegister.TabIndex = 6;
             this.linkRegister.TabStop = true;
             this.linkRegister.Text = "Зарегистрироваться";
+            this.linkRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRegister_LinkClicked);
             // 
             // LoginForm
             // 
@@ -141,7 +143,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
-//            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
