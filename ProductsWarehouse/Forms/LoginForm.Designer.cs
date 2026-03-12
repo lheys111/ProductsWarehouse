@@ -141,7 +141,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+//            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
