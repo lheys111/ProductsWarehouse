@@ -12,7 +12,6 @@ namespace ProductsWarehouse.Database
 
         public DatabaseHelper()
         {
-            // Папка в AppData
             string appDataPath = Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                 "ProductsWarehouse");
