@@ -85,7 +85,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(172, 22);
             this.txtFullName.TabIndex = 0;
-            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
+          //  this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // txtEmail
             // 

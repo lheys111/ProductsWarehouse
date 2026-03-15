@@ -23,109 +23,67 @@ namespace ProductsWarehouse.Forms
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
 
-            // Валидация
-            if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(email) ||
-                string.IsNullOrEmpty(password))
+            // проверки
+            if (fullName == "" || email == "" || password == "")
             {
-                MessageBox.Show("Заполните все поля", "Ошибка",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Заполните все поля");
                 return;
             }
 
             if (password != confirmPassword)
             {
-                MessageBox.Show("Пароли не совпадают", "Ошибка",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Пароли не совпадают");
                 return;
             }
 
             if (password.Length < 6)
             {
-                MessageBox.Show("Пароль должен быть не менее 6 символов", "Ошибка",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Пароль должен быть не меньше 6 символов");
                 return;
             }
 
-            if (!IsValidEmail(email))
+            if (!email.Contains("@") || !email.Contains("."))
             {
-                MessageBox.Show("Введите корректный email", "Ошибка",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Неправильный email");
                 return;
             }
 
             try
             {
-                using (var connection = dbHelper.GetConnection())
+                dbHelper.GetConnection().Open();
+                var conn = dbHelper.GetConnection();
+
+                // проверка есть ли уже такой email
+                string check = "SELECT COUNT(*) FROM Users WHERE Email = '" + email + "'";
+                SQLiteCommand cmd1 = new SQLiteCommand(check, conn);
+                int count = Convert.ToInt32(cmd1.ExecuteScalar());
+
+                if (count > 0)
                 {
-                    connection.Open();
-
-                    // Проверка уникальности email
-                    string checkQuery = "SELECT COUNT(*) FROM Users WHERE Email = @email";
-                    using (var checkCmd = new SQLiteCommand(checkQuery, connection))
-                    {
-                        checkCmd.Parameters.AddWithValue("@email", email);
-                        long count = (long)checkCmd.ExecuteScalar();
-
-                        if (count > 0)
-                        {
-                            MessageBox.Show("Пользователь с таким email уже существует", "Ошибка",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                    }
-
-                    // Хеширование пароля
-                    string passwordHash = PasswordHasher.HashPassword(password);
-
-                    // Добавление пользователя
-                    string insertQuery = @"
-                        INSERT INTO Users (Email, PasswordHash, FullName, Role, CreatedAt)
-                        VALUES (@email, @passwordHash, @fullName, 'Storekeeper', datetime('now'))";
-
-                    using (var insertCmd = new SQLiteCommand(insertQuery, connection))
-                    {
-                        insertCmd.Parameters.AddWithValue("@email", email);
-                        insertCmd.Parameters.AddWithValue("@passwordHash", passwordHash);
-                        insertCmd.Parameters.AddWithValue("@fullName", fullName);
-                        insertCmd.ExecuteNonQuery();
-                    }
+                    MessageBox.Show("Такой email уже есть");
+                    return;
                 }
 
-                MessageBox.Show("Регистрация прошла успешно!", "Успех",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // регистрация
+                string hash = PasswordHasher.HashPassword(password);
+                string insert = "INSERT INTO Users (Email, PasswordHash, FullName, Role, CreatedAt) VALUES ('" + email + "', '" + hash + "', '" + fullName + "', 'Storekeeper', datetime('now'))";
+                SQLiteCommand cmd2 = new SQLiteCommand(insert, conn);
+                cmd2.ExecuteNonQuery();
 
-                DialogResult = DialogResult.OK;
-                Close();
+                conn.Close();
+
+                MessageBox.Show("Регистрация успешна!");
+                this.Close();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show($"Ошибка при регистрации: {ex.Message}", "Ошибка",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ошибка при регистрации");
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
-            Close();
-        }
-
-        private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
