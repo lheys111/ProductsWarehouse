@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using ProductsWarehouse.Forms;
 namespace ProductsWarehouse.Forms
 {
     public partial class MainForm : Form
@@ -77,22 +77,38 @@ namespace ProductsWarehouse.Forms
 
         private void OpenProductsForm(object sender, EventArgs e)
         {
-            MessageBox.Show("Форма товаров будет доступна в следующей версии", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ProductsForm form = new ProductsForm();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+            lblStatus.Text = "Режим: Управление товарами";
         }
 
         private void OpenStockForm(object sender, EventArgs e)
         {
-            MessageBox.Show("Форма остатков будет доступна в следующей версии", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            StockForm form = new StockForm();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+            lblStatus.Text = "Режим: Просмотр остатков";
         }
 
         private void OpenShipmentsForm(object sender, EventArgs e)
         {
-            MessageBox.Show("Журнал отгрузок будет доступен в следующей версии", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShipmentsForm form = new ShipmentsForm();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+            lblStatus.Text = "Режим: Журнал отгрузок";
         }
 
         private void OpenNewShipmentForm(object sender, EventArgs e)
         {
-            MessageBox.Show("Создание отгрузки будет доступно в следующей версии", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            NewShipmentForm form = new NewShipmentForm(currentUserId);
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+            lblStatus.Text = "Режим: Создание новой отгрузки";
         }
 
         private void ShowAboutInfo(object sender, EventArgs e)
