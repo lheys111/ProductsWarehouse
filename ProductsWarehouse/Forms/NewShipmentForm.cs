@@ -9,7 +9,7 @@ namespace ProductsWarehouse.Forms
 
         public NewShipmentForm(int userId)
         {
-            InitializeComponent(); // ← ЭТОТ ВЫЗОВ ДОЛЖЕН БЫТЬ ТОЛЬКО ЗДЕСЬ!
+            InitializeComponent(); 
             currentUserId = userId;
             this.Text = $"Новая отгрузка - {DateTime.Now:dd.MM.yyyy}";
         }
